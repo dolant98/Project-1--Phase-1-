@@ -5,7 +5,11 @@ __pycache__/
 
 # C extensions
 *.so
-
+*.csv 
+*.jpeg
+*.png
+*.db
+zippedData/
 # Distribution / packaging
 .Python
 build/
