@@ -1,25 +1,51 @@
-# Microsoft Movie Analysis
+# Phase 1 Project Description
 
-**Author:** Theresa Dolan
+You've made it all the way through the first phase of this course - take a minute to celebrate your awesomeness!
 
-## Overview
+![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-1-project-v2-4/master/awesome.gif)
 
-This project evaluates the performance of different films at the box office.  The goal is to make a set of recommendations for Microsoft to use as they navigate their entry into the film industry. The analysis includes an assessment of recent box office data, including the production budget required to make a film, as well as the revenue generated.  The outcome is a set of three options ranging from low to high risk.  Risk is defined as the investment (production budget) required to make the film.  
+Now you will put your new skills to use with a large end-of-Phase project!
 
+In this project description, we will cover:
+
+* [***Project Overview:***](#project-overview) the project goal, audience, and dataset
+* [***Deliverables:***](#deliverables) the specific items you are required to produce for this project
+* [***Grading:***](#grading) how your project will be scored
+* [***Getting Started:***](#getting-started) guidance for how to begin your first project
+
+## Project Overview
+
+For this project, you will use exploratory data analysis to generate insights for a business stakeholder.
 
 ### Business Problem
 
-Microsoft has recently created a new movie studio and requires guidance on strategy for entering the film industry.  This includes an evaluation of the types of films which are doing best at the box office, as well as the investment required to make different types of films. High yielding films may require significant upfront investment.  An understanding of the risks in addition to the rewards is necessary.
+Microsoft sees all the big companies creating original video content and they want to get in on the fun. They have decided to create a new movie studio, but they don’t know anything about creating movies. You are charged with exploring what types of films are currently doing the best at the box office. You must then translate those findings into actionable insights that the head of Microsoft's new movie studio can use to help decide what type of films to create.
 
-### Data
+### The Data
+
+In the folder `zippedData` are movie datasets from:
+
 * [Box Office Mojo](https://www.boxofficemojo.com/)
 * [IMDB](https://www.imdb.com/)
+* [Rotten Tomatoes](https://www.rottentomatoes.com/)
+* [TheMovieDB](https://www.themoviedb.org/)
 * [The Numbers](https://www.the-numbers.com/)
 
-<<<<<<< HEAD
+Because it was collected from various locations, the different files have different formats. Some are compressed CSV (comma-separated values) or TSV (tab-separated values) files that can be opened using spreadsheet software or `pd.read_csv`, while the data from IMDB is located in a SQLite database.
 
+![movie data erd](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-1-project-v2-4/master/movie_data_erd.jpeg)
 
-### Methods
+Note that the above diagram shows ONLY the IMDB data. You will need to look carefully at the features to figure out how the IMDB data relates to the other provided data files.
+
+It is up to you to decide what data from this to use and how to use it. If you want to make this more challenging, you can scrape websites or make API calls to get additional data. If you are feeling overwhelmed or behind, we recommend you use only the following data files:
+
+* `im.db.zip`
+  * Zipped SQLite database (you will need to unzip then query using SQLite)
+  * `movie_basics` and `movie_ratings` tables are most relevant
+* `bom.movie_gross.csv.gz`
+  * Compressed CSV file (you can open without expanding the file using `pd.read_csv`)
+
+### Key Points
 
 * **Your analysis should yield three concrete business recommendations.** The ultimate purpose of exploratory analysis is not just to learn about the data, but to help an organization perform better. Explicitly relate your findings to business needs by recommending actions that you think the business (Microsoft) should take.
 
@@ -251,33 +277,34 @@ Below are the definitions of each rubric level for this objective. This informat
 
 #### Exceeds Objective
 Uses `pandas` to prepare data and answer business questions in an idiomatic, performant way
-=======
->>>>>>> de90efaad3e8565758dc990a76a1cee77194c6a2
 
+#### Meets Objective (Passing Bar)
+Successfully uses `pandas` to prepare data in order to answer business questions
 
-### Methods
+> This includes projects that _occasionally_ use base Python when `pandas` methods would be more appropriate (such as using `enumerate()` on a DataFrame), or occasionally performs operations that do not appear to have any relevance to the business questions
 
-<img width="651" alt="Screen Shot 2022-06-03 at 11 45 59 AM" src="https://user-images.githubusercontent.com/100314469/171900225-2b101d86-8d12-4c17-a152-bfc4d02adef2.png">
+#### Approaching Objective
+Uses `pandas` to prepare data, but makes significant errors
 
+> Examples of significant errors include: the result presented does not actually answer the stated question, the code produces errors, the code _consistently_ uses base Python when `pandas` methods would be more appropriate, or the submitted notebook contains significant quantities of code that is unrelated to the presented analysis (such as copy/pasted code from the curriculum or StackOverflow)
 
-### Results
+#### Does Not Meet Objective
+Unable to prepare data using `pandas`
 
-The analysis shows that gross revenue trended downward just before and during the pandemic.  While industry experts expect a bounce in 2022, overall gross revenue remains lower than in previous years.  
+> This includes projects that successfully answer the business questions, but do not use `pandas` (e.g. use only base Python, or use some other tool like R, Tableau, or Excel)
 
-<img width="650" alt="Screen Shot 2022-06-03 at 11 51 24 AM" src="https://user-images.githubusercontent.com/100314469/171901113-6becb95f-255a-4440-8348-896fda98702c.png">
+## Getting Started
 
-Additional analysis shows that there is variability of both production cost and box office revenue across movie genres.  
+Please start by reviewing the contents of this project description. If you have any questions, please ask your instructor ASAP.
 
-<img width="648" alt="Screen Shot 2022-06-03 at 11 55 20 AM" src="https://user-images.githubusercontent.com/100314469/171901735-48946fb0-7ea6-49bb-839d-661818ac8f02.png">
+Next, you will need to complete the [***Project Proposal***](#project_proposal) which must be reviewed by your instructor before you can continue with the project.
 
-The outcome includes three recommendations based on these preliminary findings:
+Then, you will need to create a GitHub repository. There are three options:
 
-<img width="636" alt="Screen Shot 2022-06-03 at 12 02 53 PM" src="https://user-images.githubusercontent.com/100314469/171903037-161116b0-0eee-4bd2-b160-c36479ebc919.png">
+1. Look at the [Phase 1 Project Templates and Examples repo](https://github.com/learn-co-curriculum/dsc-project-template) and follow the directions in the MVP branch.
+2. Fork the [Phase 1 Project Repository](https://github.com/learn-co-curriculum/dsc-phase-1-project-v2-4), clone it locally, and work in the `student.ipynb` file. Make sure to also add and commit a PDF of your presentation to your repository with a file name of `presentation.pdf`.
+3. Create a new repository from scratch by going to [github.com/new](https://github.com/new) and copying the data files from one of the above resources into your new repository. This approach will result in the most professional-looking portfolio repository, but can be more complicated to use. So if you are getting stuck with this option, try one of the above options instead.
 
-### Next Steps
+## Summary
 
-Next steps include: 
-* Working with Microsoft to understand risk tolerance
-* Collect more recent data to understand the most recent trends for Action, Animation, and Documentaries
-* Determine proportion of revenue attributed to non-theatrical releases 
-* Identify the estimated time to realize the ROI: production start to release date to box office proceeds providing a breakeven.  
+This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
